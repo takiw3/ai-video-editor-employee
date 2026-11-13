@@ -1,0 +1,13 @@
+{
+  "name": "agentic-cut",
+  "version": "1.0.0",
+  "description": "A lightweight AI video editor for Claude, built on HeyGen HyperFrames. Drop in a talking-head clip: it cuts the pauses, filler words and retakes, adds captions, zooms, text, b-roll, sound and your brand, and renders a finished short or YouTube video on your own computer.",
+  "author": {
+    "name": "TakiGPT AI Inc.",
+    "url": "https://github.com/takiw3"
+  },
+  "homepage": "https://github.com/takiw3/ai-video-editor-employee",
+  "repository": "https://github.com/takiw3/ai-video-editor-employee",
+  "license": "MIT",
+  "keywords": ["video", "video-editing", "captions", "shorts", "reels", "tiktok", "youtube", "hyperframes", "podcast-clips"]
+}

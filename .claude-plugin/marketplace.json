@@ -1,0 +1,19 @@
+{
+  "name": "agentic-cut",
+  "owner": {
+    "name": "TakiGPT AI Inc.",
+    "url": "https://github.com/takiw3"
+  },
+  "metadata": {
+    "description": "Agentic Cut: a lightweight AI video editor for Claude, built on HyperFrames."
+  },
+  "plugins": [
+    {
+      "name": "agentic-cut",
+      "source": "./",
+      "description": "Edit talking-head clips into finished shorts, reels and YouTube videos: auto cuts, captions, zooms, text, b-roll, sound, your brand. Renders on your computer with HyperFrames.",
+      "version": "1.0.0",
+      "category": "productivity"
+    }
+  ]
+}
