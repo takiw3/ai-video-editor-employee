@@ -45,8 +45,8 @@ function doCut(project, plan) {
   const res = cutVideo(project, plan);
   const { words } = sourceWords(plan);
   const out = remap(words, plan.keep);
-  writeJSON(path.join(project, "words.json"), out);
-  fs.writeFileSync(path.join(project, "transcript.txt"), transcriptText(out));
+  writeJSON(path.join(project, "timing.json"), out);
+  fs.writeFileSync(path.join(project, "script.txt"), transcriptText(out));
   writeJSON(path.join(project, "media", "cut.json"), { stamp: cutStamp(plan), total: res.total });
   return { ...res, words: out };
 }
@@ -93,7 +93,7 @@ const cmds = {
     say(`cut      ${fmtTime(win[1] - win[0])} -> ${fmtTime(res.total)}  (${a.pauseCount} pauses, ${fillers} fillers/stutters, ${retakes.length} retakes removed)`);
     for (const r of retakes) say(`         retake at ${fmtTime(r.at)}: "${r.text.slice(0, 70)}${r.text.length > 70 ? "..." : ""}"`);
     say(`format   ${format} ${CANVAS[format].join("x")}${src.width / src.height !== CANVAS[format][0] / CANVAS[format][1] ? `, reframed from ${src.width}x${src.height} (${plan.frame.mode})` : ""}`);
-    say(`words    ${res.words.length} -> words.json, transcript.txt (times on the cut)`);
+    say(`words    ${res.words.length} -> timing.json, script.txt (times on the cut)`);
     say(`next     edit plan.json, then  ac preview  and  ac render`);
   },
 
@@ -106,7 +106,7 @@ const cmds = {
       save(project, plan);
     }
     const res = doCut(project, load(project));
-    say(`cut: ${res.total.toFixed(1)} s, ${plan.keep.length} pieces. transcript.txt updated (times on the cut)`);
+    say(`cut: ${res.total.toFixed(1)} s, ${plan.keep.length} pieces. script.txt updated (times on the cut)`);
   },
 
   async build(f) {
@@ -136,7 +136,7 @@ const cmds = {
     const arg = f._[0];
     let words;
     if (arg && fs.existsSync(arg) && fs.statSync(arg).isFile()) words = sourceWords({ source: path.resolve(arg), language: f.language }).words;
-    else words = readJSON(path.join(projectDir(arg), "words.json"), []);
+    else words = readJSON(path.join(projectDir(arg), "timing.json"), []);
     if (f.from !== undefined || f.to !== undefined) words = words.filter((w) => w.start >= Number(f.from ?? 0) && w.end <= Number(f.to ?? 1e9));
     process.stdout.write(transcriptText(words));
   },

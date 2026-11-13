@@ -26,12 +26,13 @@ marketplace, and install Agentic Cut from there. Then run `/agentic-cut:setup`.
 /agentic-cut:brand accent #FFD23F, font Montserrat, bold captions, handle @yourname
 /agentic-cut:edit ~/Desktop/take.mov make it a short with a CTA to comment AGENT
 ```
-Claude cuts the take, plans the edit, and shows you a preview sheet and a list of beats. Ask for changes in plain
+Claude cuts the take, plans the edit, and shows you a preview sheet and a timeline of the edit. Ask for changes in plain
 words ("bigger captions", "zoom in on 'never'", "use my screenshot when I mention the dashboard"), then say **go**.
-The finished MP4 and an SRT caption file land next to your original clip.
+The finished MP4 and an SRT caption file are saved in the same folder as your recording.
 
 ## What it does
-- **Cuts the take for you.** Long pauses, filler words, stutters and retakes come out (it keeps your last take).
+- **Cuts the take for you.** Long pauses, filler words and stutters come out, and when you say a line twice, the
+  stumbled attempt goes.
   Your voice is cleaned up and levelled.
 - **Shorts, long-form and clips.** Vertical shorts for Reels, TikTok and YouTube Shorts; 16:9 YouTube videos; square
   and 4:5 feed posts; and the best moments of a podcast or webinar as vertical clips, with the crop following whoever
@@ -42,7 +43,7 @@ The finished MP4 and an SRT caption file land next to your original clip.
 - **HyperFrames built in.** 18 colour looks, 18 film, glitch and print treatments, and the HyperFrames registry:
   450+ lower thirds, overlays, title cards and more, installed only when you use one.
 - **Your brand on every frame.** Accent colour, fonts, caption style, look, handle and logo, set once.
-- **Preview before render.** Stills of the moments that matter. Nothing renders until you say go.
+- **Approve before it renders.** You get stills of the key moments and give the green light when it looks right.
 - **Ready to post.** An MP4 at -14 LUFS (the loudness Reels, TikTok and YouTube expect), plus an SRT caption file.
 - **Private and free to run.** Transcription and rendering happen on your computer. No uploads, no per-video fees.
 
@@ -56,7 +57,7 @@ The word-by-word styles light up each word in your accent colour as it's said. P
 | command | what it does |
 |---|---|
 | `/agentic-cut:setup` | install or check everything (once per computer, and after updates) |
-| `/agentic-cut:edit <clip>` | edit a clip into a short, reel or YouTube video |
+| `/agentic-cut:edit <clip>` | turn a raw clip into a short, reel or YouTube video |
 | `/agentic-cut:clips <long video>` | find the best moments in a podcast or webinar and cut them into shorts |
 | `/agentic-cut:effects [words]` | browse effects, looks, caption styles, sounds and HyperFrames blocks |
 | `/agentic-cut:brand` | set your colours, fonts, caption style, look, handle and logo |

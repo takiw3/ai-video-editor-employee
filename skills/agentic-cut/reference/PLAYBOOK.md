@@ -1,7 +1,7 @@
 # Playbook: recipes that work
 
 Start from the recipe closest to the request, then adjust to the transcript. Times below are examples: use the
-times in `transcript.txt`.
+times in `script.txt`.
 
 ## 1. Talking-head short (Reels, TikTok, Shorts)
 The default. Hook on frame 0, captions on every word, a move on every cut, one visual change every 3 to 5 seconds,
@@ -64,8 +64,8 @@ section titles, b-roll where the words describe something visual, a lower third 
 }
 ```
 - One `title` per section; the titles and their times make good YouTube chapters for the description.
-- Long renders take a while (about 2 to 3 minutes per minute of video on a laptop). Do a `--draft` of a section
-  first by trimming `keep` in a copy, or just render once the plan is right.
+- Long renders take a while because every frame goes through a browser. Check a section first with a `--draft`
+  of a copy whose `keep` is trimmed, or render once the plan is settled.
 
 ## 5. Ad or promo (punchy)
 ```json
@@ -88,7 +88,7 @@ section titles, b-roll where the words describe something visual, a lower third 
 Also: `creator-camcorder`, `home-movie-8mm`, `vintage-wash`, `mono-fade`, and `blocks` `camcorder-hud`.
 
 ## Taste
-- One effect per beat. A zoom, a shake and a flash on the same word cancel each other out.
+- One effect per moment. A zoom, a shake and a flash on the same word cancel each other out.
 - Captions never cover the face: `position: "low"` when the face sits low in frame.
 - Text stays up long enough to read: half a second plus a third of a second per word.
 - Accent the words that carry the meaning, not every noun.

@@ -1,4 +1,4 @@
-// Turns plan.json + words.json into a HyperFrames composition (index.html) in the project folder.
+// Turns plan.json + timing.json into a HyperFrames composition (index.html) in the project folder.
 import fs from "node:fs";
 import path from "node:path";
 import { CANVAS, HF_VERSION, HOME, RUNTIME, hf, run, readJSON, writeJSON, r3, slug } from "./util.mjs";
@@ -240,7 +240,7 @@ function fontsLink(b) {
 // plan.fixes corrects what the speech model misheard: { "chat gpt": "ChatGPT", "say new time": "save you time" }.
 // A phrase becomes one caption word spanning the words it replaces.
 export function fixedWords(project, plan) {
-  const words = readJSON(path.join(project, "words.json"), []);
+  const words = readJSON(path.join(project, "timing.json"), []);
   const fixes = Object.entries(plan.fixes || {}).map(([k, v]) => [k.toLowerCase().split(/\s+/).map(norm).filter(Boolean), String(v)]).filter(([k]) => k.length);
   if (!fixes.length) return words;
   const out = [];

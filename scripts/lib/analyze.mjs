@@ -64,7 +64,7 @@ export function analyze(words, { env = null, total, pace = "natural", keepFiller
     }
   }
   if (!keepRetakes) {
-    // a retake: the same 3+ words said again within 15 s, after a pause. Keep the last attempt.
+    // a retake: the same 3+ words said again within 15 s, after a pause: drop the earlier attempt.
     for (let i = 0; i < W.length; i++) {
       if (drop[i]) continue;
       for (let j = i + 3; j < Math.min(W.length, i + 40); j++) {

@@ -20,7 +20,7 @@ Format: 90 minutes live, or 7 short recorded lessons.
 - Demo: record a 45-second take live, with a deliberate "um" and a retake.
 
 ## 5. The first edit (20 min)
-- `/agentic-cut:edit <clip>`. Read what it cut. Open `transcript.txt`.
+- `/agentic-cut:edit <clip>`. Read what it cut. Open `script.txt`.
 - The plan: hook, captions, cut moves, zooms, one visual change every 3 to 5 seconds, CTA.
 - The preview sheet. Asking for changes in plain words. Render. Where the file lands.
 

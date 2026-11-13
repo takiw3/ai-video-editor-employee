@@ -1,6 +1,6 @@
 ---
 name: agentic-cut
-description: Edits talking-head video into finished shorts, reels, TikToks and YouTube videos on the user's computer, built on HyperFrames. Cuts pauses, filler words and retakes; adds captions, zooms, text, b-roll, registry blocks (lower thirds, overlays, title cards), sound effects, music and a colour look; renders and delivers an MP4 with an SRT. Also pulls clips out of long videos (podcasts, webinars, Zoom calls). Use whenever someone sends a video file or asks to edit a video, make a short or reel, add captions, cut a podcast into clips, or change a video made this way.
+description: Agentic Cut, an AI video editor built on HyperFrames that runs on the user's computer. Turns raw talking-head footage into shorts, TikToks and YouTube videos by removing pauses, filler words and retakes and adding captions, zooms, text, b-roll, HyperFrames registry blocks, sound effects, music and a colour look, then renders an MP4 plus SRT. Also finds and cuts clips from long recordings such as podcasts, webinars and Zoom calls. Trigger it when a user shares a video file, wants captions or a short made, wants clips from a long recording, or wants changes to an Agentic Cut project.
 ---
 
 # Agentic Cut
@@ -34,14 +34,14 @@ Save with `AC brand accent=#FF5A36 font="Poppins" captions=highlight handle=@nam
 1. `AC new "<clip>" [--format short|long|square|feed] [--title "..."]`. Format defaults from the clip's shape;
    the user's words win ("make this a short" on a landscape clip means `--format short`). Wide clip to vertical:
    add `--fit` for the whole frame over a blurred fill, or keep the crop and set `frame.x`. It transcribes on the
-   computer, removes pauses, "um"s, stutters and retakes (keeps the last take), cleans the voice, and prints what it cut.
-2. Read `transcript.txt` (times are on the CUT timeline: these are the times plan.json uses).
+   computer, removes pauses, "um"s, stutters and abandoned attempts at a line, cleans the voice, and prints what it cut.
+2. Read `script.txt` (times are on the CUT timeline: these are the times plan.json uses).
 3. Write `plan.json` (every field: `reference/PLAN.md`; ready-made recipes: `reference/PLAYBOOK.md`). Decide:
    - **Hook (shorts):** text on frame 0 that states the payoff in under 8 words. Use their first line or sharpen it.
    - **Captions:** their brand style for shorts; `accent` the 3 to 6 words that carry the meaning. Long-form: `none`
      (an SRT is delivered anyway) unless they want them burned in.
    - **Motion:** `cuts.style` handles every jump cut. Add 2 to 4 `zooms` on the key lines, a `shake` or `flash` on the
-     single biggest beat, never more than one effect per beat.
+     single biggest moment, never more than one effect per moment.
    - **Visual change every 3 to 5 seconds** in shorts: text, b-roll, an emoji, a number, a zoom. Long-form: every
      20 to 40 seconds.
    - **B-roll and media:** only files the user gave you (`media/` in the project, or any path). Ask for screen
@@ -50,7 +50,7 @@ Save with `AC brand accent=#FF5A36 font="Poppins" captions=highlight handle=@nam
    - **Fixes:** read the transcript for misheard names and brands and add `fixes` ("chat gpt" -> "ChatGPT").
 4. `AC preview` makes `preview/sheet.jpg`, stills at the moments that matter. Look at it (Read the image). Fix
    anything that overlaps, is cut off, or covers the face, and preview again.
-5. Show the user: the sheet path, a short beat list (time, what they see, what they hear), and what was cut. Ask
+5. Show the user: the sheet path, a short timeline of the edit (time, what's on screen, which effect), and what was cut. Ask
    "Render it?" and wait, unless they already said to go ahead.
 6. `AC render` checks the composition, renders, normalises loudness to -14 LUFS, and saves
    `<Title> - edited.mp4` and an `.srt` next to the original clip. Report the path, length and loudness from its

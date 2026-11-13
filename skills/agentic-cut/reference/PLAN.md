@@ -1,7 +1,7 @@
 # plan.json: every field
 
 `AC new` writes plan.json with the cut already filled in. Everything else is optional. Times are seconds on the CUT
-timeline (the times in `transcript.txt`), except `keep` and `window`, which are seconds in the SOURCE clip.
+timeline (the times in `script.txt`), except `keep` and `window`, which are seconds in the SOURCE clip.
 `"end"` means the last frame.
 
 ## The video

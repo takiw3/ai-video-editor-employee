@@ -24,12 +24,12 @@ Drag the file into Claude:
 ```
 /agentic-cut:edit ~/Desktop/IMG_1234.MOV  short, comment AGENT CTA at the end
 ```
-Claude cuts it, plans the edit, and shows you a preview sheet and a list of beats. Ask for changes in plain words
+Claude cuts it, plans the edit, and shows you a preview sheet and a timeline of the edit. Ask for changes in plain words
 ("bigger captions", "zoom on 'never'", "use my screenshot when I say dashboard"), then say **go**.
 
 ## 5. Post
 `<your clip name> - edited.mp4` and an `.srt` caption file appear next to your original. The MP4 is 1080x1920 at
--14 LUFS, ready for Reels, TikTok and Shorts.
+-14 LUFS, ready to post on Instagram, TikTok or YouTube.
 
 ## Next
 - A podcast or webinar: `/agentic-cut:clips ~/Downloads/episode.mp4`

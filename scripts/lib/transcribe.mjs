@@ -6,7 +6,7 @@ import { CACHE, fileKey, hf, readJSON, writeJSON, fmtTime } from "./util.mjs";
 
 export function transcribe(file, { language, model } = {}) {
   const dir = path.join(CACHE, fileKey(file) + (language ? `-${language}` : ""));
-  const out = path.join(dir, "words.json");
+  const out = path.join(dir, "asr.json");
   const cached = readJSON(out);
   if (cached) return cached;
   fs.mkdirSync(dir, { recursive: true });
